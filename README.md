@@ -2,5 +2,3 @@
 This is my first Git repository
 <br>
 Author-Ruchit parmar
-<br>
-Collage only
