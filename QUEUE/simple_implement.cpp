@@ -3,15 +3,14 @@ using namespace std;
 
 class Queue {
     
-    int* arr;
+    int size;
+    int arr[10];
     int qfront;
     int rear; 
-    int size;
     
 public:
     Queue() {
-        size = 100001;
-        arr = new int[size];
+        size = 10;
         qfront = 0;
         rear = 0;
     }
@@ -39,8 +38,8 @@ public:
     }
 
     int dequeue() {
-        if(qfront == rear) {
-            return -1;
+        if(isEmpty()==true) {
+            cout<<endl<<"Queue is Empty."<<endl;
         }
         else
         {	int ans = arr[qfront];
@@ -63,4 +62,25 @@ public:
             return arr[qfront];
         }
     }
+    void display(){
+        for(int i=qfront; i<rear; i++){
+            cout<<arr[i]<<" ";
+        }
+        cout<<endl;
+    }
 };
+
+int main (){
+    Queue Q;
+    
+    cout<<Q.isEmpty()<<endl;
+    Q.enqueue(10);
+    Q.enqueue(2);
+    Q.enqueue(3);
+    Q.enqueue(4);
+    Q.display();
+    // Q.dequeue();
+    cout<<Q.front()<<endl;
+    
+    return 0;
+}
