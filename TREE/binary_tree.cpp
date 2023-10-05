@@ -19,7 +19,7 @@ public:
 
 node *buildtree(node *root)
 {
-    cout << "Enter the data:" << endl;
+    cout << "Enter the data: " ;
     int data;
     cin >> data;
     root = new node(data);

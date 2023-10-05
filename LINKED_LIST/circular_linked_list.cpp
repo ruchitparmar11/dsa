@@ -207,7 +207,6 @@ void display() {
         current = current->next;
     } while (current != head);
 
-    cout << "NULL" << endl;
 }
 
 int main() {
