@@ -112,9 +112,15 @@ void insertAtSpecificPoint(int val) {
         cin >> val;
         Node* new_node = new Node(val);
         Node* temp = head;
-        for (int i = 1; i < loc - 1; i++) {
+        int current_pos = 0;
+        int pos;
+        while (current_pos != pos - 1)
+        {
             temp = temp->next;
+            current_pos++;
         }
+    
+        // temp is pointing to node at pos-1
         new_node->next = temp->next;
         temp->next = new_node;
     }
